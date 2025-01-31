@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTER MIXOLOGY</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="#inicio">
+        <i class="fas fa-cocktail shaker-icon"></i>
+        <span class="logo-text">MASTER MIXOLOGY</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="cart-container">
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </div>
+      <div class="cart-dropdown">
+        <div class="cart-header">
+          <h3>Carrito de Compras</h3>
+          <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+          <p>Total: <span>$0.00</span></p>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Bienvenidos a MASTER MIXOLOGY</h1>
+      <p class="hero-subtitle">Descubre los mejores cocteles y bebidas premium</p>
+      <div class="hero-features">
+        <div class="feature">
+          <i class="fas fa-cocktail"></i>
+          <span>Cocteles Premium</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-star"></i>
+          <span>Calidad Garantizada</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-truck"></i>
+          <span>Entrega Rápida</span>
+        </div>
+      </div>
+      <a href="#productos" class="btn hero-btn">
+        <span>Ver Productos</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Productos -->
+  <section id="productos" class="products">
+    <h2>Nuestros Productos</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito Clásico">
+        <h3>Mojito Clásico</h3>
+        <p>Refrescante y lleno de sabor.</p>
+        <span class="price">$10.00</span>
+        <button class="add-to-cart" data-id="1" data-name="Mojito Clásico" data-price="10.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarita">
+        <h3>Margarita</h3>
+        <p>El equilibrio perfecto entre dulce y ácido.</p>
+        <span class="price">$12.00</span>
+        <button class="add-to-cart" data-id="1" data-name="Margarita" data-price="12.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg" alt="Tequila Sunrise">
+        <h3>Tequila Sunrise</h3>
+        <p>Un amanecer en cada sorbo.</p>
+        <span class="price">$11.00</span>
+        <button class="add-to-cart" data-id="3" data-name="Tequila Sunrise" data-price="11.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/cpf4j51504371346.jpg" alt="Piña Colada">
+        <h3>Piña Colada</h3>
+        <p>El sabor tropical que amas.</p>
+        <span class="price">$13.00</span>
+        <button class="add-to-cart" data-id="4" data-name="Piña Colada" data-price="13.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/qwc5f91512406543.jpg" alt="Crema de Whiskey">
+        <h3>Crema de Whiskey</h3>
+        <p>Suave y delicioso.</p>
+        <span class="price">$14.00</span>
+        <button class="add-to-cart" data-id="5" data-name="Crema de Whiskey" data-price="14.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/yqsvtw1478252982.jpg" alt="Padrino">
+        <h3>Padrino</h3>
+        <p>Un clásico con estilo.</p>
+        <span class="price">$15.00</span>
+        <button class="add-to-cart" data-id="6" data-name="Padrino" data-price="15.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg" alt="Moscow Mule">
+        <h3>Moscow Mule</h3>
+        <p>Fresco y picante.</p>
+        <span class="price">$16.00</span>
+        <button class="add-to-cart" data-id="7" data-name="Moscow Mule" data-price="16.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/rxtqps1478251029.jpg" alt="Gin & Tonic">
+        <h3>Gin & Tonic</h3>
+        <p>Elegante y refrescante.</p>
+        <span class="price">$17.00</span>
+        <button class="add-to-cart" data-id="8" data-name="Gin & Tonic" data-price="17.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/t6caa21582485702.jpg" alt="Bloody Mary">
+        <h3>Bloody Mary</h3>
+        <p>Picante y reconfortante.</p>
+        <span class="price">$15.00</span>
+        <button class="add-to-cart" data-id="9" data-name="Bloody Mary" data-price="15.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/fi67641668420787.jpg" alt="Sex on the Beach">
+        <h3>Sex on the Beach</h3>
+        <p>Dulce y frutal, perfecto para el verano.</p>
+        <span class="price">$14.00</span>
+        <button class="add-to-cart" data-id="10" data-name="Sex on the Beach" data-price="14.00">
+          <span>Añadir al carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Sobre Nosotros -->
+  <section id="nosotros" class="about">
+  <div class="about-container">
+    <h2>Sobre Nosotros</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p class="about-description">En Master Mixology, somos apasionados por el arte de la coctelería. Desde 2020, nos hemos dedicado a crear experiencias únicas a través de bebidas excepcionales.</p>
+        
+        <div class="about-features">
+          <div class="about-feature">
+            <i class="fas fa-trophy"></i>
+            <h3>Experiencia</h3>
+            <p>Más de 5 años creando cócteles premium</p>
+          </div>
+          
+          <div class="about-feature">
+            <i class="fas fa-leaf"></i>
+            <h3>Ingredientes</h3>
+            <p>Selección de productos frescos y de alta calidad</p>
+          </div>
+          
+          <div class="about-feature">
+            <i class="fas fa-glass-cheers"></i>
+            <h3>Innovación</h3>
+            <p>Creaciones únicas y sabores extraordinarios</p>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">5000+</span>
+            <span class="stat-label">Clientes Satisfechos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Cócteles Únicos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Calidad Premium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contáctanos</h2>
+        <p class="contact-description">¿Tienes alguna pregunta? Estamos aquí para ayudarte a crear la mejor experiencia con tus cócteles.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Llámanos</h3>
+              <p>+34 612 345 678</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>info@renzacocktails.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Horario</h3>
+              <p>Lun - Sab: 9:00 - 20:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span>Enviar Mensaje</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal de éxito -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <i class="fas fa-check-circle"></i>
+        <h3>¡Mensaje Enviado!</h3>
+        <p>Gracias por contactarnos. Te responderemos pronto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Información de contacto -->
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <address>
+          <p><i class="fas fa-location-dot"></i> Av. Principal #123, Ciudad</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+34612345678">+34 612 345 678</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@MASTER-MIXOLOGY.com">info@MASTER-MIXOLOGY.com</a></p>
+        </address>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://instagram.com/MASTER MIXOLOGY" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://facebook.com/MASTER MIXOLOGY" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://tiktok.com/@MASTER MIXOLOGY" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="footer-section map-container">
+        <h3>Ubicación</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d-122.41941558468162!3d37.77492997975919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1633033226890!5m2!1sen!2sus" 
+          width="100%" 
+          height="200" 
+          style="border:0;" 
+          loading="lazy"
+          allowfullscreen=""
+          title="Ubicación de Renza Cocktails">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Derechos de autor y enlaces legales -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 MASTER MIXOLOGY. Todos los derechos reservados.</p>
+      <nav class="footer-nav">
+        <a href="/privacidad">Política de Privacidad</a> |
+        <a href="/terminos">Términos y Condiciones</a> |
+        <a href="/cookies">Política de Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Script para el menú hamburguesa -->
+  <script src="script.js"></script>
+</body>
+</html>
